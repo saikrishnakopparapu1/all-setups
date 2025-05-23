@@ -29,10 +29,8 @@ mv kubectl /usr/local/bin/kubectl
 
 mv kops-linux-amd64 /usr/local/bin/kops
 
-export KOPS_STATE_STORE=s3://mustafa77.flm.k8s
+export KOPS_STATE_STORE=s3://saikrishna.tcs.k8s
 
-kops create cluster --name mustafa.k8s.local--zones us-east-1a, us-east-1b--master-count=1-- master-size t2.medium --master-volume-size 30--node-count=2--node-size t2.micro --node- A
+kops create cluster --name saikrishna.k8s.local --zones us-east-1a, us-east-1b --master-count 1 --master-size t2.medium --master-volume-size 30 --node-count 2 --node-size t2.micro --node-volume-size 20
 
-volume-size 20
-
-kops update cluster --name mustafa.k8s.local--yes--admin
+kops update cluster --name saikrishna.k8s.local --yes --admin
